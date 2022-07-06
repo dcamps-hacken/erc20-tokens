@@ -10,9 +10,7 @@ This project is used to deploy 3 test ERC20 tokens to play with the DEX project:
 
 You can either
 
-### 1. Interact directly with the deployed contracts using a metamask account
-
-    Deployed contracts:
+1. Interact directly with the deployed contracts using a metamask account
 
 -   Rinkeby:
     [StableCoin](https://rinkeby.etherscan.io/address/0x81f7f9be026841b133bfF7F96EC97c330048E38b#code),
@@ -21,7 +19,7 @@ You can either
     <br>
     > Obtain test ETH to interact with the contracts from [Rinkeby faucet](https://rinkebyfaucet.com/)
 
-### 2. Download the repo to make some tests and play arround (next section)
+2. Download the repo to make some tests and play arround (next section)
 
 # QUICK START 🚀
 
