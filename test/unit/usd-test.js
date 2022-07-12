@@ -8,6 +8,7 @@ describe("StableCoin", function () {
     const minted = BigNumber.from("1000000000000000000")
     let deployer, user
     beforeEach(async function () {
+        await deployments.fixture(["all"])
         stablecoin = await ethers.getContract("StableCoin")
         deployer = (await getNamedAccounts()).deployer
         user = (await getNamedAccounts()).user1

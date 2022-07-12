@@ -8,6 +8,7 @@ describe("Wizard", function () {
     const minted = BigNumber.from("1000000000000000000")
     let deployer, user
     beforeEach(async function () {
+        //await deployments.fixture(["all"])
         wizard = await ethers.getContract("Wizard")
         deployer = (await getNamedAccounts()).deployer
         user = (await getNamedAccounts()).user1

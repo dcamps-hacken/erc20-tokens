@@ -4,6 +4,7 @@ require("@nomiclabs/hardhat-waffle")
 require("hardhat-gas-reporter")
 require("solidity-coverage")
 require("hardhat-deploy")
+require("./tasks/mint")
 
 module.exports = {
     solidity: {
@@ -13,7 +14,7 @@ module.exports = {
             { version: "0.7.0" },
         ],
     },
-    defaultNetwork: "hardhat",
+    defaultNetwork: "localhost",
     networks: {
         localhost: {
             url: "http://127.0.0.1:8545/",
