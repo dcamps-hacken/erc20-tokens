@@ -4,7 +4,7 @@ require("@nomiclabs/hardhat-waffle")
 require("hardhat-gas-reporter")
 require("solidity-coverage")
 require("hardhat-deploy")
-require("./tasks/mint")
+require("./tasks/mint-balance")
 
 module.exports = {
     solidity: {
@@ -54,8 +54,14 @@ module.exports = {
         token: "MATIC",
     }, */
     etherscan: {
-        apiKey: process.env.ETHERSCAN_API_KEY,
+        apiKey: {
+            rinkeby: process.env.ETHERSCAN_API_KEY,
+            polygonMumbai: process.env.POLYGONSCAN_API_KEY,
+        },
     },
+    /* polygonscan: {
+        apiKey: process.env.POLYGONSCAN_API_KEY,
+    }, */
     namedAccounts: {
         deployer: {
             default: 0,
