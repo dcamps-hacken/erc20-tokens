@@ -27,7 +27,7 @@ Interact directly with the deployed contracts using a [Metamask](https://metamas
     <br>
     > Obtain test $MATIC to interact with the contracts from [Polygon faucet](https://faucet.polygon.technology)
 
-# HARDHAT PROJECT 🚀
+# HARDHAT PROJECT
 
 Download the repo and play around with tests, tasks or your own scripts:
 
