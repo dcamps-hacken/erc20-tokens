@@ -1,12 +1,12 @@
 # ERC20 TOKENS
 
-This project is used to deploy 3 test ERC20 tokens to play with the DEX project:
+This project is used to deploy 3 test ERC20 tokens to play with the **DEX** project:
 
 -   StableCoin ($USD)
 -   Wizard ($WZD)
 -   Elf ($ELF)
 
-All of them inherit from the OpenZeppelin ERC20 standard, only adding a constructor that mints 100 million tokens to the deployer and a mint function to create extra tokens for any wallet.
+All of them inherit from the **OpenZeppelin** ERC20 standard, only adding a constructor that mints 100 million tokens to the deployer and a mint function to create extra tokens for any wallet.
 
 # QUICK START 🚀
 
@@ -37,7 +37,7 @@ git clone https://github.com/fields93/erc20-tokens.git
 
 ## Deploy the contracts
 
-The simplest way to play with the ERC20 is on the hardhat local network, since you will not need any wallet with funds or extra tools. The ERC20 tokens $USD, $WZD and $ELF must be deployed in order to interact with them.
+The simplest way to play with the ERC20 is on the hardhat local network, since you will not need any wallet with funds or extra tools. The smart contracts of the ERC20 tokens `$USD`, `$WZD` and `$ELF` must be deployed in order to interact with them.
 
 First of all, the hardhat local node has to be initialized:
 
@@ -51,14 +51,14 @@ You can deploy all the contrats at once using:
 yarn hardhat deploy
 ```
 
-> the deploy script used in this command can be found in _deploy01-deploy-tokens.js_
+> the deploy script used in this command can be found in _deploy/01-deploy-tokens.js_
 
 ## Testing the contracts
 
-Since all contracts inherit from OpenZeppelin's widely tested ERC20 contracts, only the extra methods of the contracts are tested:
+Since all contracts inherit from **OpenZeppelin**'s widely tested ERC20 contracts, only the extra methods of the contracts are tested:
 
--   The **Constructor**, that will mint an initial amount of tokens to the deployer address
--   Function **mint**, which will mint additional tokens to the specified address
+-   The `Constructor`, that will mint an initial amount of tokens to the deployer address
+-   Function `mint`, which will mint additional tokens to the specified address
 
 Use the following command to test the said functions in all contracts:
 
@@ -66,19 +66,13 @@ Use the following command to test the said functions in all contracts:
 yarn hardhat test
 ```
 
-# Solidity Coverage:
+> The script used for testing is found in _test/unit/test.js_
+
+### Solidity Coverage:
 
 > ⌛️Coming soon⌛️
 
-> The file used for testing is found in _test/unit/test.js_
-
 ## Tasks
-
-Two tasks have been created to interact with the contracts after their deployment:
-
--   `get-token` will print the amount of tokens the account[1] has
--   `mint-token --amount tokenAmount` will mint tokenAmount of tokens for account[1] and print its balance
-    > `token` corresponds to `usd`, `wizard`or `elf`; and `tokenAmount` should be the number of tokens you want to mint.
 
 See all the available tasks and their description by typing:
 
@@ -91,3 +85,12 @@ To see the options of the task you want to use type:
 ```
 yarn hardhat help mint-wizard
 ```
+
+Two tasks have been created to interact with the contracts after their deployment:
+
+-   `get-token` will print the amount of tokens the _user1_ has
+-   `mint-token --amount tokenAmount` will mint tokenAmount of tokens for _user1_ and print its balance
+
+    > _token_ corresponds to `usd`, `wizard`or `elf` > _tokenAmount_ is the number of tokens you want to mint.
+
+> Task script found at _tasks/mint-balance.js_
