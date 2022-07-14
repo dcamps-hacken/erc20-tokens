@@ -13,7 +13,7 @@ contract Elf is ERC20 {
     /**
      *  @notice 10M tokens are minted when the contract is deployed
      */
-    constructor() ERC20("WizardCoin", "WZD") {
+    constructor() ERC20("Elf", "ELF") {
         _mint(msg.sender, 1e10 * 10**decimals());
     }
 

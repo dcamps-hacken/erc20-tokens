@@ -5,7 +5,7 @@ module.exports = async ({ deployments, getNamedAccounts }) => {
     const { deploy, log } = deployments
     const { deployer } = await getNamedAccounts()
 
-    const usd = await deploy("StableCoin", {
+    /* const usd = await deploy("StableCoin", {
         from: deployer,
         log: true,
         args: [],
@@ -15,7 +15,7 @@ module.exports = async ({ deployments, getNamedAccounts }) => {
         from: deployer,
         log: true,
         args: [],
-    })
+    }) */
 
     const elf = await deploy("Elf", {
         from: deployer,
@@ -28,8 +28,8 @@ module.exports = async ({ deployments, getNamedAccounts }) => {
         process.env.ETHERSCAN_API_KEY
     ) {
         log("Verifying...")
-        await verify(usd.address, [], "contracts/stablecoin.sol:StableCoin")
-        await verify(wizard.address, [], "contracts/wizard.sol:Wizard")
+        /* await verify(usd.address, [], "contracts/stablecoin.sol:StableCoin")
+        await verify(wizard.address, [], "contracts/wizard.sol:Wizard") */
         await verify(elf.address, [], "contracts/elf.sol:Elf")
     }
     log("--------------------------")
