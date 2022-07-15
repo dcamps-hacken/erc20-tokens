@@ -42,13 +42,13 @@ The simplest way to play with the ERC20 is on the hardhat local network, since y
 First of all, the hardhat local node has to be initialized:
 
 ```
-yarn hardhat node --network localhost
+yarn hardhat node
 ```
 
 You can deploy all the contrats at once using:
 
 ```
-yarn hardhat deploy
+yarn hardhat deploy --network localhost
 ```
 
 > the deploy script used in this command can be found in _deploy/01-deploy-tokens.js_
@@ -70,7 +70,11 @@ yarn hardhat test
 
 ### Solidity Coverage:
 
-> ⌛️Coming soon⌛️
+yarn hardhat coverage
+
+### Solhint:
+
+yarn solhint contracts/\*.sol
 
 ## Tasks
 

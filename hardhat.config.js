@@ -14,7 +14,7 @@ module.exports = {
             { version: "0.7.0" },
         ],
     },
-    defaultNetwork: "localhost",
+    defaultNetwork: "hardhat",
     networks: {
         localhost: {
             url: "http://127.0.0.1:8545/",
